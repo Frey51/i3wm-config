@@ -31,8 +31,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # exec --no-startup-id nm-applet
 
 # Use amixer to adjust volume in alsa
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 1%+ && pkill -RTMIN+10 i3blocks 
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 1%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
 # Media player controls
@@ -193,11 +193,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 
-       status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf 
+      status_command i3blocks -c ~/.config/i3/i3blocks.conf 
 	position top
 	
 	font pango: SauceCodePro Nerd Font Black 9
 }
+
 
 #Autorun 
 
