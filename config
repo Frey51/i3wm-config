@@ -191,19 +191,21 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-
-      status_command i3blocks -c ~/.config/i3/i3blocks.conf 
-	position top
-	
-	font pango: SauceCodePro Nerd Font Black 9
-}
+#bar {
+#
+#      status_command i3blocks -c ~/.config/i3/i3blocks.conf 
+#	position top
+#	
+#	font pango: SauceCodePro Nerd Font Black 9
+#}
 
 
 #Autorun 
 
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec variety
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec variety  
+exec udiskie 
+exec_always exec dunst
 exec_always /usr/bin/libinput-gestures
 exec mbpfan
 exec_always exec compton -f
