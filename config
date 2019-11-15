@@ -209,8 +209,9 @@ exec_always exec dunst
 exec_always /usr/bin/libinput-gestures
 exec mbpfan
 exec_always exec compton -f
+exec_always exec xrdb .Xresources 
 
-#custom bindings
+#Custom bindings
 bindsym $mod+Left workspace prev
 bindsym $mod+Right workspace  next
 bindsym $mod+c exec rofi -show run
@@ -222,3 +223,7 @@ bindsym $mod+x exec i3lock
 default_border pixel 1
 bindsym $mod+Mod1 f exec pcmanfm
 bindsym $mod+Mod1 b exec firefox
+bindsym $mod+Mod1 v exec vlc
+bindsym $mod+Mod1 t exec telegram-desktop
+bindsym $mod+Mod1 a exec anki
+bindsym $mod+Mod1 q exec qbittorrent
